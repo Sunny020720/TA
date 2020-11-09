@@ -1,4 +1,4 @@
-/* p.62  ´òÓ¡·¨¶¨¸ñÊ½µÄÈÕÆÚ   */ 
+/* p.62  æ‰“å°æ³•å®šæ ¼å¼çš„æ—¥æœŸ   */ 
 
 #include <stdio.h>
 
@@ -58,30 +58,32 @@ int main()
     }
     printf(",  20%.2d.\n",year);
     
-    //ÅĞ¶Ï²¢Êä³öĞÇÆÚ¼¸ 
+    //åˆ¤æ–­å¹¶è¾“å‡ºæ˜ŸæœŸå‡  
     {
-	//°ÑÒ»ÔÂºÍ¶şÔÂ¿´³ÉÊÇÉÏÒ»ÄêµÄÊ®ÈıÔÂºÍÊ®ËÄÔÂ£¬
+	//æŠŠä¸€æœˆå’ŒäºŒæœˆçœ‹æˆæ˜¯ä¸Šä¸€å¹´çš„åä¸‰æœˆå’Œåå››æœˆï¼Œ
 	if(month == 1|| month == 2) 
 	{
         month += 12;
         year--;
     }
-    //»ùÄ·À­¶ûÉ­¼ÆËã¹«Ê½  W= (d+2*m+3*(m+1)/5+y+y/4-y/100+y/400) mod 7
+    //åŸºå§†æ‹‰å°”æ£®è®¡ç®—å…¬å¼  W= (d+2*m+3*(m+1)/5+y+y/4-y/100+y/400) mod 7
     int Week=(day + 2 * month + 3 * (month+1) / 5 + year 
 	+ year / 4 - year / 100 + year / 400) % 7;
-    
+	
+    printf("è¿™ä¸€å¤©æ˜¯ ") ;
 	switch(Week)
     {
-    case 0: printf("ĞÇÆÚÒ»\n"); break;
-    case 1: printf("ĞÇÆÚ¶ş\n"); break;
-    case 2: printf("ĞÇÆÚÈı\n"); break;
-    case 3: printf("ĞÇÆÚËÄ\n"); break;
-    case 4: printf("ĞÇÆÚÎå\n"); break;
-    case 5: printf("ĞÇÆÚÁù\n"); break;
-    case 6: printf("ĞÇÆÚÈÕ\n"); break;
+     
+    case 0: printf("æ˜ŸæœŸä¸€\n"); break;
+    case 1: printf("æ˜ŸæœŸäºŒ\n"); break;
+    case 2: printf("æ˜ŸæœŸä¸‰\n"); break;
+    case 3: printf("æ˜ŸæœŸå››\n"); break;
+    case 4: printf("æ˜ŸæœŸäº”\n"); break;
+    case 5: printf("æ˜ŸæœŸå…­\n"); break;
+    case 6: printf("æ˜ŸæœŸæ—¥\n"); break;
     }
 }
-    printf("ÊäÈë0ÒÔÍË³ö,ÆäËû¼ÌĞø\n");
+    printf("è¾“å…¥0ä»¥é€€å‡º,å…¶ä»–ç»§ç»­\n");
     scanf("%d",&i);
     }
     return 0;
