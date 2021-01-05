@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-//5B·Ö½âÖÊÒòÊı2 
+//5Båˆ†è§£è´¨å› æ•°2 
 int main(){	
 	int k,x,i,count,q,div;
 	int prime[1000]={0};	
